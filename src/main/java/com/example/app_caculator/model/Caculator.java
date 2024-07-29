@@ -10,11 +10,10 @@ public class Caculator {
             case '*':
                 return firstOperand * secondOperand;
             case '/':
-                if (secondOperand != 0) {
-                    return firstOperand / secondOperand;
-                }
-                else
+                if (secondOperand == 0) {
                     throw new ArithmeticException("Division by zero");
+                }
+                return firstOperand / secondOperand;
             default:
                 throw new ArithmeticException("Invalid operator");
         }
